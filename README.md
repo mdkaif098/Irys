@@ -28,9 +28,9 @@ irys balance WALLET_ADDRESS -t ethereum -n devnet --provider-url RPC_URL
 ```
 > PRIVATE_KEY → your private key (without 0x)
 
-> RPC_URL → your RPC endpoint
+> RPC_URL → your sepolia RPC endpoint
 
-> WALLET_ADDRESS → your wallet address
+> WALLET_ADDRESS → your MM wallet address
 
 ## 📂 Daily Upload Script
 
@@ -43,10 +43,9 @@ Instead of typing long commands every day, use `upload.sh`.
    chmod +x upload.sh
    ```
 2. Run the upload (daily):
-> ./upload.sh FILE_NAME FILE_FORMAT PRIVATE_KEY RPC_URL
-
-Example:
-> ./upload.sh myimage jpg abc123... https://ethereum-devnet.io
+   ```bash
+   ./upload.sh
+   ```
 
 ## 📢 Community & Support
 
