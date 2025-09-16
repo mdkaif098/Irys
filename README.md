@@ -48,6 +48,9 @@ Example:
 ## 📢 Community & Support
 
 Stay connected and get updates:
+
 💬 Join our Telegram Channel: https://t.me/kind_cr
+
 🐦 Follow us on X (Twitter): https://x.com/Mohamma34525340 & https://x.com/armaanbhat201
+
 ▶️ YouTube: https://www.youtube.com/@KindCrypto
