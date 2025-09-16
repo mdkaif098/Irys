@@ -1,27 +1,25 @@
 #!/bin/bash
-# ============================================
-#   Irys Daily Upload Script
-#   Author: MAFIA
-#   Usage: ./upload.sh FILE_NAME FILE_FORMAT PRIVATE_KEY RPC_URL
-# ============================================
+set -e
 
-if [ "$#" -ne 4 ]; then
-  echo "❌ Usage: ./upload.sh FILE_NAME FILE_FORMAT PRIVATE_KEY RPC_URL"
-  exit 1
-fi
+echo "🔑 Enter your private key (without 0x):"
+read PRIVATE_KEY
 
-FILE_NAME=$1
-FILE_FORMAT=$2
-PRIVATE_KEY=$3
-RPC_URL=$4
+echo "🌐 Enter your RPC URL:"
+read RPC_URL
 
-echo "🚀 Uploading $FILE_NAME.$FILE_FORMAT to Irys (devnet)..."
+echo "💸 Fund your wallet (Devnet) [optional]:"
+irys fund 1000000 -n devnet -t ethereum -w $PRIVATE_KEY --provider-url $RPC_URL || echo "Skipping fund step..."
 
-irys upload $FILE_NAME \
-  -n devnet \
-  -t ethereum \
-  -w $PRIVATE_KEY \
-  --tags $FILE_NAME $FILE_FORMAT \
-  --provider-url $RPC_URL
+echo "🏦 Enter your Wallet Address to check balance:"
+read WALLET_ADDRESS
+irys balance $WALLET_ADDRESS -t ethereum -n devnet --provider-url $RPC_URL
 
-echo "✅ Upload Completed!"
+echo "📂 Enter the file path you want to upload (example: image.png):"
+read FILE_NAME
+echo "🖼️ Enter the file format (example: PNG, JPG):"
+read FILE_FORMAT
+
+echo "🚀 Uploading file to Irys..."
+irys upload $FILE_NAME -n devnet -t ethereum -w $PRIVATE_KEY --tags $FILE_NAME $FILE_FORMAT --provider-url $RPC_URL
+
+echo "✅ All operations completed!"
