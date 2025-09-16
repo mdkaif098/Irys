@@ -27,7 +27,9 @@ irys fund 1000000 -n devnet -t ethereum -w PRIVATE_KEY --provider-url RPC_URL
 irys balance WALLET_ADDRESS -t ethereum -n devnet --provider-url RPC_URL
 ```
 > PRIVATE_KEY → your private key (without 0x)
+
 > RPC_URL → your RPC endpoint
+
 > WALLET_ADDRESS → your wallet address
 
 ## 📂 Daily Upload Script
