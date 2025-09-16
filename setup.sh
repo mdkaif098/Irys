@@ -18,6 +18,9 @@ npm -v
 echo "⚡ Installing Irys CLI globally..."
 sudo npm i -g @irys/cli
 
+echo "✅ Verifying Irys CLI installation..."
+irys
+
 echo "🔑 Please enter your private key (without 0x):"
 read PRIVATE_KEY
 
