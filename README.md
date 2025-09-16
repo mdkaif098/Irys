@@ -13,21 +13,22 @@ Run this command on your Ubuntu/Debian server:
 curl -fsSL https://raw.githubusercontent.com/mdkaif098/Irys/main/setup.sh | bash
 ```
 
-🔑 Please enter your private key (without 0x):
-> abc123...
+## 💸 Wallet Fund & Balance Check
 
-🌐 Please enter your RPC URL:
-> https://rpc.ankr.com/eth
+If you want to **fund your wallet (Devnet)** or **check your balance**, use these commands separately:
 
-🏦 Please enter your Wallet Address to check balance:
-> 0x1234abcd...
+### 🔹 Fund Wallet (Devnet)
+```bash
+irys fund 1000000 -n devnet -t ethereum -w PRIVATE_KEY --provider-url RPC_URL
+```
 
-📂 Please enter the file path you want to upload:
-> image.png
-
-🖼️ Please enter the file format (example: PNG, JPG):
-> PNG
-
+### 🔹 Check Wallet Balance
+```bash
+irys balance WALLET_ADDRESS -t ethereum -n devnet --provider-url RPC_URL
+```
+> PRIVATE_KEY → your private key (without 0x)
+> RPC_URL → your RPC endpoint
+> WALLET_ADDRESS → your wallet address
 
 ## 📂 Daily Upload Script
 
