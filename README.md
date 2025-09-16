@@ -45,3 +45,9 @@ Instead of typing long commands every day, use `upload.sh`.
 Example:
 > ./upload.sh myimage jpg abc123... https://ethereum-devnet.io
 
+## 📢 Community & Support
+
+Stay connected and get updates:
+💬 Join our Telegram Channel: https://t.me/kind_cr
+🐦 Follow us on X (Twitter): https://x.com/Mohamma34525340 & https://x.com/armaanbhat201
+▶️ YouTube: https://www.youtube.com/@KindCrypto
