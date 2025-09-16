@@ -21,38 +21,4 @@ sudo npm i -g @irys/cli
 echo "✅ Verifying Irys CLI installation..."
 irys
 
-echo "🔑 Please enter your private key (without 0x):"
-read PRIVATE_KEY
-
-echo "🌐 Please enter your RPC URL:"
-read RPC_URL
-
-echo "💸 Funding Irys wallet with 1,000,000 on Devnet..."
-irys fund 1000000 \
-  -n devnet \
-  -t ethereum \
-  -w $PRIVATE_KEY \
-  --provider-url $RPC_URL
-
-echo "🏦 Please enter your Wallet Address to check balance:"
-read WALLET_ADDRESS
-
-echo "💰 Checking balance of wallet..."
-irys balance $WALLET_ADDRESS \
-  -t ethereum \
-  -n devnet \
-  --provider-url $RPC_URL
-
-echo "📂 Please enter the file path you want to upload (example: image.png):"
-read FILE_NAME
-
-echo "🖼️ Please enter the file format (example: PNG, JPG):"
-read FILE_FORMAT
-
-echo "🚀 Uploading file to Irys..."
-irys upload $FILE_NAME \
-  -n devnet \
-  -t ethereum \
-  -w $PRIVATE_KEY \
-  --tags $FILE_NAME $FILE_FORMAT \
-  --provider-url $RPC_URL
+echo "🎉 Installation complete..!"
