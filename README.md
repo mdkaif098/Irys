@@ -36,7 +36,7 @@ Instead of typing long commands every day, use `upload.sh`.
 ### 🔸 How to Use
 1. Download the script (once):
    ```bash
-   curl -fsSL https://raw.githubusercontent.com/USERNAME/REPO_NAME/main/upload.sh -o upload.sh
+   curl -fsSL https://raw.githubusercontent.com/mdkaif098/Irys/main/upload.sh -o upload.sh
    chmod +x upload.sh
    ```
 2. Run the upload (daily):
