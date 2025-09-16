@@ -10,7 +10,7 @@ It automatically sets up Node.js v20, all required dependencies, and Irys CLI â€
 Run this command on your Ubuntu/Debian server:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/USERNAME/REPO_NAME/main/setup.sh | bash
+curl -fsSL https://raw.githubusercontent.com/mdkaif098/Irys/main/setup.sh | bash
 ```
 
 ðŸ”‘ Please enter your private key (without 0x):
