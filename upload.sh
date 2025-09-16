@@ -51,6 +51,6 @@ echo "🖼️ Enter the file format (example: PNG, JPG):"
 read FILE_FORMAT
 
 echo "🚀 Uploading file to Irys..."
-irys upload $FILE_NAME -n devnet -t ethereum -w $PRIVATE_KEY --tags $FILE_NAME $FILE_FORMAT --provider-url $RPC_URL
+irys upload $FILE_NAME -n devnet -t ethereum -w $IRYS_PRIVATE_KEY --tags $FILE_NAME $FILE_FORMAT --provider-url $IRYS_RPC_URL
 
 echo "✅ All operations completed!"
