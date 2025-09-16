@@ -27,3 +27,21 @@ curl -fsSL https://raw.githubusercontent.com/mdkaif098/Irys/main/setup.sh | bash
 
 🖼️ Please enter the file format (example: PNG, JPG):
 > PNG
+
+
+## 📂 Daily Upload Script
+
+Instead of typing long commands every day, use `upload.sh`.
+
+### 🔸 How to Use
+1. Download the script (once):
+   ```bash
+   curl -fsSL https://raw.githubusercontent.com/USERNAME/REPO_NAME/main/upload.sh -o upload.sh
+   chmod +x upload.sh
+   ```
+2. Run the upload (daily):
+> ./upload.sh FILE_NAME FILE_FORMAT PRIVATE_KEY RPC_URL
+
+Example:
+> ./upload.sh myimage jpg abc123... https://ethereum-devnet.io
+
