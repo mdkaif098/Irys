@@ -36,28 +36,7 @@ else
     echo "✅ Private key and RPC URL saved for future use."
 fi
 
-# 2. Fund Wallet (Optional)
-echo "💸 Fund your wallet (Devnet)? [y/n]"
-read FUND_CHOICE
-if [[ "$FUND_CHOICE" == "y" || "$FUND_CHOICE" == "Y" ]]; then
-    irys fund 1000000 -n devnet -t ethereum -w $PRIVATE_KEY --provider-url $RPC_URL || echo "Skipping fund step..."
-else
-    echo "Skipping fund step..."
-fi
-
-# 3. Wallet Balance
-while true; do
-  echo "🏦 Enter your Wallet Address to check balance:"
-  read WALLET_ADDRESS
-  if [[ -n "$WALLET_ADDRESS" ]]; then
-    break
-  else
-    echo "❌ Wallet Address cannot be empty."
-  fi
-done
-irys balance $WALLET_ADDRESS -t ethereum -n devnet --provider-url $RPC_URL
-
-# 4. Upload File
+# 2. Upload File
 while true; do
   echo "📂 Enter the file path you want to upload (example: image.png):"
   read FILE_NAME
